@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyMood</string>
+    <string name="already_have_account_signup">Already have account?<b> SignUp</b></string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="title_app">MyMood</string>
+    <string name="sign_up">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
