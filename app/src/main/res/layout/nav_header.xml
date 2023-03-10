@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#9FA8DA"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#9FA8DA">
 
     <ImageView
         android:id="@+id/photoProfile"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/circle_photo_account"
-        android:src="@drawable/icon_account_circle"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_account_circle" />
+
     <TextView
         android:id="@+id/nameUserTextView"
-        android:layout_below="@id/photoProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nameUser"
-        android:textSize="21sp"
-        android:textStyle="bold"
+        android:layout_below="@id/photoProfile"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/text_color"/>
+        android:text="nameUser"
+        android:textColor="@color/text_color"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/emailUserTextView"
-        android:layout_below="@id/nameUserTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="emailUser@gmail.com"
-        android:textSize="18sp"
+        android:layout_below="@id/nameUserTextView"
         android:layout_marginLeft="20dp"
-        android:textColor="@color/text_color"/>
+        android:text="emailUser@gmail.com"
+        android:textColor="@color/text_color"
+        android:textSize="18sp" />
+
     <View
-        android:layout_below="@id/emailUserTextView"
-        android:layout_width="match_parent"
         style="@style/line"
-        />
+        android:layout_width="match_parent"
+        android:layout_below="@id/emailUserTextView" />
 
 </RelativeLayout>

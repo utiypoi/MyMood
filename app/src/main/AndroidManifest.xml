@@ -15,6 +15,10 @@
         android:theme="@style/Theme.MyMood"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false">
             <meta-data

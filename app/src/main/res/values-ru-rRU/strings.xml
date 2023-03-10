@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyMood</string>
+    <string name="have_account_signup">Нет учетной записи? <b>Зарегистрируйтесь</b></string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="title_app">Мое настроение</string>
+    <string name="settings">Настройки</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="add_note">Добавить</string>
+    <string name="cancel">Отмена</string>
+    <string name="search">поиск</string>
+    <string name="profile">Профиль</string>
+    <string name="notes">Записи</string>
+    <string name="statistics">Статистика</string>
+</resources>

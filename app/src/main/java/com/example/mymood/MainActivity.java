@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
                         replaceFragment(new StatisticFragment());
                         break;
                     case R.id.nav_settings:
-                        replaceFragment(new NoteFragment());
+                        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                        startActivity(intent);
                         break;
                     default:
                         return true;

@@ -5,23 +5,23 @@
 
     <group android:checkableBehavior="single">
 
-    <item
-        android:id="@+id/nav_profile"
-        android:icon="@drawable/icon_person"
-        android:title="Профиль" />
-    <item
-        android:id="@+id/nav_note"
-        android:icon="@drawable/icon_note"
-        android:title="Записи" />
-    <item
-        android:id="@+id/nav_statistic"
-        android:icon="@drawable/icon_graph"
-        android:title="Статистика" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/icon_person"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/icon_note"
+            android:title="@string/notes" />
+        <item
+            android:id="@+id/nav_statistic"
+            android:icon="@drawable/icon_graph"
+            android:title="@string/statistics" />
 
-    <item
-        android:id="@+id/nav_settings"
-        android:icon="@drawable/icon_settings"
-        android:title="Настройки" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/icon_settings"
+            android:title="@string/settings" />
     </group>
 
 </menu>

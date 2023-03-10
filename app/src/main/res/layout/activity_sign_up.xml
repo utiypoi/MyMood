@@ -57,7 +57,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/button_log"
         android:onClick="registration"
-        android:text="регистрация"
+        android:text="@string/sign_up"
         android:textColor="@color/white"
         app:backgroundTint="@null" />
 
@@ -69,7 +69,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/button_log"
         android:onClick="backLoginActivity"
-        android:text="отмена"
+        android:text="@string/cancel"
         android:textColor="@color/white"
         app:backgroundTint="@null" />
 

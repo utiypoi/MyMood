@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E8EAF6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.NoteFragment">
@@ -14,12 +15,16 @@
             android:id="@+id/searchEntry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="поиск"
+            android:layout_margin="@dimen/app_margin"
+            android:hint="@string/search"
             android:singleLine="true"
+            android:backgroundTint="#9EA7D9"
+            android:textColor="#5D64E2"
+            android:textColorHint="#9EA7D9"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewMoods"
             android:layout_width="match_parent"
@@ -27,18 +32,21 @@
             android:layout_margin="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchEntry" />
+            app:layout_constraintTop_toBottomOf="@+id/searchEntry"
+            tools:listitem="@layout/note_item" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/createEntryButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:src="@drawable/icon_add"
+            android:layout_margin="@dimen/app_margin"
             android:backgroundTint="#9FA8DA"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/icon_add"
             app:borderWidth="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
