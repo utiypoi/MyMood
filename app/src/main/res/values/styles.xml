@@ -37,4 +37,7 @@
     <style name="ToolBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorControlNormal">@color/dark_blue</item>
     </style>
+    <style name="ThemeOverlay.titleColor" parent="">
+        <item name="android:textColorSecondary">@color/text_color</item>
+    </style>
 </resources>

@@ -15,7 +15,7 @@
             android:title="@string/notes" />
         <item
             android:id="@+id/nav_statistic"
-            android:icon="@drawable/icon_graph"
+            android:icon="@drawable/icon_statistic"
             android:title="@string/statistics" />
 
         <item
@@ -23,5 +23,23 @@
             android:icon="@drawable/icon_settings"
             android:title="@string/settings" />
     </group>
-
+    <item android:id="@+id/group_practices"
+        android:title="Practices">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_affirmation"
+                android:icon="@drawable/icon_affirmation"
+                android:title="Affirmations" />
+            <item
+                android:id="@+id/nav_meditation"
+                android:icon="@drawable/icon_meditation"
+                android:title="Meditation" />
+            <item
+                android:id="@+id/nav_breathing_practices"
+                android:icon="@drawable/icon_breath"
+                android:title="Breathing practices" />
+            </group>
+        </menu>
+    </item>
 </menu>

@@ -13,4 +13,16 @@
     <string name="profile">Profile</string>
     <string name="notes">Notes</string>
     <string name="statistics">Statistics</string>
+    <string name="name_smiling_super">super</string>
+    <string name="name_smiling_good">good</string>
+    <string name="name_smiling_neutral">neutral</string>
+    <string name="name_smiling_bad">bad</string>
+    <string name="name_smiling_terrible">terrible</string>
+    <string name="button_super_description">Button super</string>
+    <string name="button_good_description">Button good</string>
+    <string name="button_neutral_description">Button neutral</string>
+    <string name="button_bad_description">Button bad</string>
+    <string name="button_terrible_description">Button terrible</string>
+    <string name="question_feeling">How do you feel?</string>
+    <string name="choose_mood">Choose your mood</string>
 </resources>

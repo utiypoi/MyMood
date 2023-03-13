@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    tools:context=".fragments.AddNoteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_mood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/question_feeling"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/date_time_entry"
+            style="@style/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:backgroundTint="#9EA7D9"
+            android:textColor="#5D64E2"
+            android:textColorHint="#9EA7D9" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tableLayout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/choose_mood"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/design_table_moods"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButtonSuper"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/button_super_description"
+                android:onClick="openSuperButton"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/smiling_super" />
+
+            <ImageButton
+                android:id="@+id/imageButtonGood"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/button_good_description"
+                android:onClick="openGoodButton"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/smiling_good" />
+
+            <ImageButton
+                android:id="@+id/imageButtonNeutral"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/button_neutral_description"
+                android:onClick="openNeutralButton"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/smiling_neutral" />
+
+            <ImageButton
+                android:id="@+id/imageButtonBad"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/button_bad_description"
+                android:onClick="openBadButton"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/smiling_bad" />
+
+            <ImageButton
+                android:id="@+id/imageButtonTerrible"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:contentDescription="@string/button_terrible_description"
+                android:onClick="openTerribleButton"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/smiling_terrible" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewSuper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/name_smiling_super"
+                android:textColor="@color/text_super"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewGood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/name_smiling_good"
+                android:textColor="@color/text_good"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/name_smiling_neutral"
+                android:textColor="@color/text_neutral"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewBad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/name_smiling_bad"
+                android:textColor="@color/text_bad"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewTerrible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/name_smiling_terrible"
+                android:textColor="@color/text_terrible"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/createEntryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/app_margin"
+        android:backgroundTint="#9FA8DA"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/icon_done"
+        app:borderWidth="0dp" />
+
+</RelativeLayout>

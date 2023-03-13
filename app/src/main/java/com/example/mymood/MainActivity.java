@@ -68,27 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-//        actionBar = getSupportActionBar();
-//        actionBar.setTitle("LogIn");
-//        firebaseAuth = FirebaseAuth.getInstance();
-//        checkUser();
-//        binding.logutButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                firebaseAuth.signOut();
-//            }
-//        });
-//    }
-//
-//    private void checkUser() {
-//        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-//        if(firebaseUser == null){
-//            startActivity(new Intent(this,LoginActivity.class));
-//        }else{
-//            String email = firebaseUser.getEmail();
-//            binding.loginTextView.setText(email);
-//        }
-//    }
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
