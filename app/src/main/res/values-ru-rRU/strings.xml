@@ -26,4 +26,11 @@
     <string name="button_terrible_description">Кнопка ужасно</string>
     <string name="question_feeling">Как вы себя чувствуете?</string>
     <string name="choose_mood">Выберите соответствующее настроение</string>
+    <string name="photo_profile">Фото профиля</string>
+    <string name="name_profile">Имя</string>
+    <string name="email_profile">Email</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="edit_profile">Изменить данные</string>
+    <string name="name_user">Имя пользователя</string>
+    <string name="email_user">Почта пользователя</string>
 </resources>

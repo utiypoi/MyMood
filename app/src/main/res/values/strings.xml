@@ -25,4 +25,11 @@
     <string name="button_terrible_description">Button terrible</string>
     <string name="question_feeling">How do you feel?</string>
     <string name="choose_mood">Choose your mood</string>
+    <string name="photo_profile">Profile photo</string>
+    <string name="name_profile">Name</string>
+    <string name="email_profile">Email</string>
+    <string name="phone_number">Phone number</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="name_user">name user</string>
+    <string name="email_user">email user</string>
 </resources>
