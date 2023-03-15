@@ -1,4 +1,4 @@
-package com.example.mymood;
+package com.example.mymood.auth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.mymood.R;
+import com.example.mymood.auth.LoginActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 

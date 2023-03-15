@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_statistic" />
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.example.mymood.LoginActivity"
+        android:name="com.example.mymood.auth.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
     <activity
@@ -50,7 +50,7 @@
         tools:layout="@layout/activity_settings" />
     <activity
         android:id="@+id/signUpActivity"
-        android:name="com.example.mymood.SignUpActivity"
+        android:name="com.example.mymood.auth.SignUpActivity"
         android:label="activity_sign_up"
         tools:layout="@layout/activity_sign_up" />
 </navigation>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#9FA8DA"
     android:padding="20dp"
-    tools:context=".LoginActivity">
+    tools:context=".auth.LoginActivity">
 
     <TextView
         android:id="@+id/titleLabelTextView"

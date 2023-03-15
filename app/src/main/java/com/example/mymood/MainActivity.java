@@ -8,20 +8,20 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
+import com.example.mymood.fragments.AffirmationFragment;
+import com.example.mymood.fragments.BreathingPracticesFragment;
+import com.example.mymood.fragments.MeditationFragment;
 import com.example.mymood.fragments.NoteFragment;
 import com.example.mymood.fragments.ProfileFragment;
 import com.example.mymood.fragments.StatisticFragment;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-
-import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
@@ -62,13 +63,32 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                         startActivity(intent);
                         break;
+                    case R.id.nav_affirmation:
+                        replaceFragment(new AffirmationFragment());
+                        break;
+                    case R.id.nav_meditation:
+                        replaceFragment(new MeditationFragment());
+                        break;
+                    case R.id.nav_breathing_practices:
+                        replaceFragment(new BreathingPracticesFragment());
+                        break;
                     default:
                         return true;
                 }
                 return true;
             }
         });
+        setDefaultFragment();
     }
+
+    private void setDefaultFragment() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        NoteFragment noteFragment = new NoteFragment();
+        fragmentTransaction.replace(R.id.fragmentLayout,noteFragment,"NoteFragment");
+        fragmentTransaction.commit();
+    }
+
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
