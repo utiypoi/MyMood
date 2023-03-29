@@ -74,7 +74,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextNameProfile"
+                android:id="@+id/editTextEmailProfile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email_profile"
@@ -108,5 +108,16 @@
             android:background="@drawable/button_log"
             android:text="@string/edit_profile"
             app:layout_constraintTop_toBottomOf="@id/linearLayoutInfoProfile" />
+        <Button
+            android:id="@+id/buttonExitAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_log"
+            android:text="@string/exit_account"
+            app:layout_constraintTop_toBottomOf="@id/buttonEditProfile"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

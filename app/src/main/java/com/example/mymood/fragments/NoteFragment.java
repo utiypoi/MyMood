@@ -4,25 +4,30 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.mymood.AddNoteActivity;
+import com.example.mymood.mood.Mood;
 import com.example.mymood.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+
 public class NoteFragment extends Fragment {
+
+    ArrayList<Mood> moods = new ArrayList<Mood>();
+
 
     public NoteFragment() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

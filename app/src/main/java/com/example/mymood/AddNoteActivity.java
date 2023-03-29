@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.format.DateUtils;
@@ -23,7 +24,7 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
 
     private EditText dateTimeEntry, editTextDescription;
     private TextView textViewSuper, textViewGood, textViewNeutral, textViewBad, textViewTerrible;
-    private ImageButton imageButtonSuper, imageButtonGood, imageButtonNeutral, imageButtonBad, imageButtonTerrible;
+    private ImageButton imageButtonSuper, imageButtonGood, imageButtonNeutral, imageButtonBad, imageButtonTerrible, imageButtonBack;
     Calendar calendar = Calendar.getInstance();
     private FloatingActionButton createEntryButton;
     int priority;
@@ -80,6 +81,7 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
         textViewGood = findViewById(R.id.textViewGood);
         textViewNeutral = findViewById(R.id.textViewNeutral);
         textViewBad = findViewById(R.id.textViewBad);
+        imageButtonBack = findViewById(R.id.imageButtonBackInMainActivity);
         textViewTerrible = findViewById(R.id.textViewTerrible);
         imageButtonSuper = findViewById(R.id.imageButtonSuper);
         imageButtonGood = findViewById(R.id.imageButtonGood);
@@ -93,6 +95,7 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
         imageButtonNeutral.setOnClickListener(this);
         imageButtonBad.setOnClickListener(this);
         imageButtonTerrible.setOnClickListener(this);
+        imageButtonBack.setOnClickListener(this);
     }
 
     @Override
@@ -127,6 +130,11 @@ public class AddNoteActivity extends AppCompatActivity implements View.OnClickLi
                 textViewTerrible.setVisibility(View.VISIBLE);
                 textViewVisibilityString = String.valueOf(R.string.name_smiling_terrible);
                 priority = 5;
+                break;
+            case R.id.imageButtonBackInMainActivity:
+                Intent intent = new Intent(AddNoteActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
             default:
                 setVisibleSmiling(view);
