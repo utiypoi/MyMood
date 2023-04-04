@@ -35,4 +35,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_description">Add description</string>
+    <string name="affirmation_health_description">AffirmationHealth</string>
+    <string name="title_affirmation">Title Affirmation</string>
+    <string name="description_affirmation">Description Affirmation</string>
+    <string name="how_to_listen">how to listen?</string>
+    <string name="start">start</string>
 </resources>

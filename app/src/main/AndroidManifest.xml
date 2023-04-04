@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyMood"
         tools:targetApi="31">
         <activity
+            android:name=".DetailAffirmationActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddNoteActivity"
             android:exported="false" />
         <activity
