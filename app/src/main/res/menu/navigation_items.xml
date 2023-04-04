@@ -24,21 +24,21 @@
             android:title="@string/settings" />
     </group>
     <item android:id="@+id/group_practices"
-        android:title="Practices">
+        android:title="@string/practices">
         <menu>
             <group android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_affirmation"
                 android:icon="@drawable/icon_affirmation"
-                android:title="Affirmations" />
+                android:title="@string/affirmations" />
             <item
                 android:id="@+id/nav_meditation"
                 android:icon="@drawable/icon_meditation"
-                android:title="Meditation" />
+                android:title="@string/meditation" />
             <item
                 android:id="@+id/nav_breathing_practices"
                 android:icon="@drawable/icon_breath"
-                android:title="Breathing practices" />
+                android:title="@string/breathing_practices" />
             </group>
         </menu>
     </item>

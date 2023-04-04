@@ -1,5 +1,7 @@
 package com.example.mymood;
 
+import static com.example.mymood.R.id.emailUserTextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -13,6 +15,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.mymood.fragments.AffirmationFragment;
 import com.example.mymood.fragments.BreathingPracticesFragment;
@@ -22,11 +25,14 @@ import com.example.mymood.fragments.ProfileFragment;
 import com.example.mymood.fragments.StatisticFragment;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     private MaterialToolbar materialToolbar;
     private DrawerLayout drawerLayout;
+    private TextView email;
     private NavigationView navigationView;
 
     @Override
@@ -36,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         materialToolbar = findViewById(R.id.topAppLayout);
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
+        email = (TextView) navigationView.findViewById(emailUserTextView);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+
         materialToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
                 item.setChecked(true);
                 drawerLayout.closeDrawer(GravityCompat.START);
-                switch (id){
+                switch (id) {
                     case R.id.nav_note:
                         replaceFragment(new NoteFragment());
                         break;
@@ -85,14 +95,14 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         NoteFragment noteFragment = new NoteFragment();
-        fragmentTransaction.replace(R.id.fragmentLayout,noteFragment,"NoteFragment");
+        fragmentTransaction.replace(R.id.fragmentLayout, noteFragment, "NoteFragment");
         fragmentTransaction.commit();
     }
 
-    private void replaceFragment(Fragment fragment){
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentLayout,fragment);
+        fragmentTransaction.replace(R.id.fragmentLayout, fragment);
         fragmentTransaction.commit();
     }
 }

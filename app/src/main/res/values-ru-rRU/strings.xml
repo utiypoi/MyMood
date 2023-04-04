@@ -33,4 +33,10 @@
     <string name="edit_profile">Изменить данные</string>
     <string name="name_user">Имя пользователя</string>
     <string name="email_user">Почта пользователя</string>
+    <string name="add_description">Добавить комментарий</string>
+    <string name="exit_account">Выход из аккаунта</string>
+    <string name="practices">Практики</string>
+    <string name="affirmations">Аффирмации</string>
+    <string name="meditation">Медитация</string>
+    <string name="breathing_practices">Дыхательные практики</string>
 </resources>
