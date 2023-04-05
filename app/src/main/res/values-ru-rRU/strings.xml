@@ -34,6 +34,11 @@
     <string name="name_user">Имя пользователя</string>
     <string name="email_user">Почта пользователя</string>
     <string name="add_description">Добавить комментарий</string>
+    <string name="affirmation_health_description">Аффирмация на здоровье</string>
+    <string name="title_affirmation">Название аффирмации</string>
+    <string name="description_affirmation">Описание аффирмации</string>
+    <string name="how_to_listen">как слушать?</string>
+    <string name="start">начать</string>
     <string name="exit_account">Выход из аккаунта</string>
     <string name="practices">Практики</string>
     <string name="affirmations">Аффирмации</string>

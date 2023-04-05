@@ -28,12 +28,10 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private MaterialToolbar materialToolbar;
     private DrawerLayout drawerLayout;
-    private TextView email;
-    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +39,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         materialToolbar = findViewById(R.id.topAppLayout);
         drawerLayout = findViewById(R.id.drawerLayout);
-        navigationView = findViewById(R.id.navigationView);
-        email = (TextView) navigationView.findViewById(emailUserTextView);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.navigationView);
+        navigationView.setNavigationItemSelectedListener(this);
+        View navigationViewHeader = navigationView.getHeaderView(0);
+        TextView email = (TextView) navigationViewHeader.findViewById(emailUserTextView);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        email.setText(user.getEmail());
 
 
         materialToolbar.setOnClickListener(new View.OnClickListener() {
@@ -104,5 +105,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentLayout, fragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return false;
     }
 }

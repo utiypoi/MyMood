@@ -40,4 +40,9 @@
     <string name="description_affirmation">Description Affirmation</string>
     <string name="how_to_listen">how to listen?</string>
     <string name="start">start</string>
+    <string name="practices">practices</string>
+    <string name="exit_account">exit account</string>
+    <string name="affirmations">affirmations</string>
+    <string name="meditation">meditation</string>
+    <string name="breathing_practices">breathing practices</string>
 </resources>
