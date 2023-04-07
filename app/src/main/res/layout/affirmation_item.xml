@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:clickable="true"
         app:cardCornerRadius="15dp"
@@ -18,6 +18,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/photoAffirmationImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
@@ -25,6 +26,7 @@
                 android:src="@drawable/health" />
 
             <TextView
+                android:id="@+id/titleAffirmationTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -33,11 +35,23 @@
                 android:textColor="#7682C3"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-
             <TextView
+                android:id="@+id/timeAffirmationTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@string/time_affirmation"
+                android:textColor="#7682C3"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/descriptionAffirmationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
                 android:text="@string/description_affirmation"
                 android:textColor="@color/dark_blue"
                 android:textSize="14sp" />

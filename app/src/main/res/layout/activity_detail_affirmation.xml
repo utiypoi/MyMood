@@ -8,13 +8,14 @@
     tools:context=".DetailAffirmationActivity">
 
     <ImageView
+        android:id="@+id/photoDetailAffirmationImageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        android:background="@drawable/gradient_photo"
         android:src="@drawable/health" />
 
     <TextView
+        android:id="@+id/titleDetailAffirmationTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -24,11 +25,21 @@
         android:lines="2"
         android:textStyle="bold"
         />
-
     <TextView
+        android:id="@+id/timeDetailAffirmationTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:text="@string/time_affirmation"
+        android:textColor="#7682C3"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/descriptionDetailAffirmationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="@string/description_affirmation"
         android:textSize="18sp"
         android:textColor="@color/dark_blue"
@@ -41,6 +52,7 @@
         >
 
         <Button
+            android:id="@+id/howToListenButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/how_to_listen"
@@ -48,12 +60,12 @@
             android:background="@android:color/transparent"
             android:drawableLeft="@drawable/icon_question"/>
         <Button
+            android:id="@+id/startButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/start"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-
             android:drawableLeft="@drawable/icon_music"
             />
 

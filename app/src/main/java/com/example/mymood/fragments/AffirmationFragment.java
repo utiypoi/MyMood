@@ -1,66 +1,71 @@
 package com.example.mymood.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.mymood.Affirmation;
+import com.example.mymood.AffirmationAdapter;
+import com.example.mymood.AffirmationRecyclerViewInterface;
+import com.example.mymood.DetailAffirmationActivity;
 import com.example.mymood.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AffirmationFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class AffirmationFragment extends Fragment {
+import java.util.ArrayList;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public AffirmationFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AffirmationFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AffirmationFragment newInstance(String param1, String param2) {
-        AffirmationFragment fragment = new AffirmationFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+public class AffirmationFragment extends Fragment implements AffirmationRecyclerViewInterface {
+    private RecyclerView recyclerView;
+    ArrayList<Affirmation> affirmations = new ArrayList<Affirmation>();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_affirmation, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_affirmation, container, false);
+        setInitialData();
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclingViewAffirmation);
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        //recyclerView.setHasFixedSize(true);
+        AffirmationAdapter adapter = new AffirmationAdapter(getContext(), affirmations, this);
+        recyclerView.setAdapter(adapter);
+//        AffirmationAdapter.onAffirmationClickListener onAffirmationClickListener = new AffirmationAdapter.onAffirmationClickListener() {
+//            @Override
+//            public void onAffirmationClick(Affirmation affirmation) {
+//                Intent intent = new Intent(getActivity(), DetailAffirmationActivity.class);
+//                intent.putExtra(DetailAffirmationActivity.AFFIRMATION_ID, affirmation.getId());
+//                startActivity(intent);
+//            }
+//        };
+
+        return rootView;
+    }
+
+
+    private void setInitialData() {
+        affirmations.add(new Affirmation(1,"Здоровье","Аффирмация для поднятия духа и увеличении силы", "4 минуты", R.drawable.heal_affir, R.raw.affirmation_health));
+        affirmations.add(new Affirmation(2,"Здоровье","Аффирмация для поднятия духа и увеличении силы", "4 минуты", R.drawable.heal_affir, R.raw.affirmation_health));
+        affirmations.add(new Affirmation(3,"Здоровье","Аффирмация для поднятия духа и увеличении силы", "4 минуты", R.drawable.heal_affir, R.raw.affirmation_health));
+        affirmations.add(new Affirmation(4,"Здоровье","Аффирмация для поднятия духа и увеличении силы", "4 минуты", R.drawable.heal_affir, R.raw.affirmation_health));
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(getContext(),DetailAffirmationActivity.class);
+        intent.putExtra("Title",affirmations.get(position).getTitleAffirmation());
+        intent.putExtra("Time", affirmations.get(position).getTime());
+        intent.putExtra("Description", affirmations.get(position).getDescription());
+        intent.putExtra("Photo", affirmations.get(position).getPhoto());
+        startActivity(intent);
     }
 }
